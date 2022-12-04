@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(class="Container")
+    h1 #{title}
+  div(class="categorieDisplay")        
+      form(method='POST' action='')
+        div.form-group
+          label(for='titel') titel:
+          input#name.form-control(type='text',name='titel')
+          label(for='rating') rating:
+          input#name.form-control(type='text',name='rating')
+          label(for='auteur') auteur:
+          input#name.form-control(type='text',name='auteur')
+          label(for='beschrijving') beschrijving:
+          textarea#name.form-control(type='text',name='beschrijving')
+        button.btn.btn-primary(type='submit') Submit
+
+      if errors 
+        ul
+          for error in errors
+            li!= error.msg

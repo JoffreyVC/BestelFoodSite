@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div(class="row")
+    h2=title
+  div(class="row")
+  each categorie in categorie_list
+    div(class="col-sm-6 col-md-4")
+        div(class="thumbnail")
+            h4 #{categorie.name} 
+            picture
+                img(src='/images/'+categorie.afbeelding alt="...")
+            a(href=categorie.url class="btn btn-primary col-xs-12" role="button") Bekijk gerechten
+            div(class="clearfix")
+  
+  else 
+    There are no categories.
+    
+
+  

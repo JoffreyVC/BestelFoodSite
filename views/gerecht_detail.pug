@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  div(class="Container")
+      h2 #{gerecht.name} 
+      p #{gerecht.beschrijving}
+      p Prijs: € #{gerecht.prijs}
+      div(class="afbeelding")
+          picture
+            img(src='/images/'+gerecht.afbeelding alt="Afbeelding kon niet laden")
+  
+  
+      hr
+      a(href='/catalog/voegtoe/'+gerecht._id id="buttonVoegGerechtToe" gerecht=gerecht winkelmandItem=item winkelmand=winkelmand) Voeg toe aan winkelmandje
+      
+block scripts
+    script(src='/javascripts/scripts.js')
+      
+      
+      
+
+
+
+
+      
+      
+        
+
+      
+    
+

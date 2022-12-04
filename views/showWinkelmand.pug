@@ -1,0 +1,70 @@
+extends layout
+
+block content
+    
+    if cart
+        div(class="row")
+            div(class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3")
+                ul(class="list-group")
+                    each gerecht in cart.items
+                        li(class="list-group-item")   
+                            strong #{gerecht.qty} | 
+                            strong #{gerecht.item.name} | 
+                            span(class="label label-succes") € #{gerecht.item.prijs}
+                            
+                            div(class="dropdown")
+                                button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Acties
+
+                                div(class="dropdown-menu" aria-labelledby="dropdownMenuButton")
+                                    a(class="dropdown-item" href="/catalog/reduce/"+gerecht.item._id) Min 1 item
+                                    a(class="dropdown-item" href="/catalog/addOne/"+gerecht.item._id) Plus 1 item
+                                    a(class="dropdown-item" href="/catalog/remove/"+gerecht.item._id) Remove item
+                                
+        div(class="row")
+            div(class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3")
+                strong Totaal: € #{cart.totalPrice}
+        hr   
+    
+        div(class="row")
+            div(class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3")
+                a(href="/catalog/checkOut" type="button" class="btn btn-success") checkout  
+                
+    else
+        div(class="row")
+            div(class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3")
+                h2 winkelmand is leeg
+            
+    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            

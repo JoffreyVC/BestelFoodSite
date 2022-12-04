@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+    h2 #{categorie.name} 
+    h3 Gerechten:
+
+    div(class="row")
+    each gerecht in categorie_gerecht  
+        div(class="col-sm-6 col-md-4")
+            div(class="thumbnail")
+                img(src='/images/'+gerecht.afbeelding alt="..." class="img-responsive")
+                div(class="caption")
+                    h4 #{gerecht.name}
+                    p(class="description") #{gerecht.beschrijving}
+                    div(class="clearfix")
+                        div(class="price pull-left") € #{gerecht.prijs}
+                        a(href='/catalog/voegtoe/'+gerecht._id class="btn btn-success pull-right" role="button") Voeg toe
+        hr
+    else
+        p geen gerechten 

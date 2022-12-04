@@ -1,0 +1,70 @@
+extends layout
+block content
+
+    div(class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3")
+        h1 Checkout
+        h4 Your total € #{total}
+        if noError
+            div(id="charge-error" class="alert alert-danger" style="display: none;")
+        else
+            div(id="charge-error" class="alert alert-danger") 
+            p=errMsg
+            
+        form(action="/" method="post" id="checkout-form")
+            div(class="col-xs-12")
+                label(for="name") Name
+                input(type='text' id="name" class="form-control" required name="name")
+            div(class="col-xs-12")
+                div(class="form-group")
+                    label(for="address") Address
+                    input(type='text' id="address" class="form-control" required name="address")
+            div(class="col-xs-12" )
+                div(class="form-group")
+                    label(for="card-name") Card holder name
+                    input(type='text' id="card-name" class="form-control" required)
+            div(class="col-xs-12")
+                div(class="form-group" id="naamKaart")
+                    //input(name="cardToken" id="stripToken") 
+                    //input(name="stripToken" id="stripToken")
+
+        button(type="submit" class="btn btn-success" id="buyButton") Buy now
+
+
+block scripts
+    script(src="https://js.stripe.com/v3/")
+    script(type="text/javascript" src="/javascripts/checkout.js")
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+        

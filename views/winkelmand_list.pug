@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  
+  div(class="Container")
+      h2=title
+  
+      each mand, index in winkelmand
+        a(id="winkelMand",winkelMandObject=mand)
+
+
+      else
+        a er is geen winkelmand

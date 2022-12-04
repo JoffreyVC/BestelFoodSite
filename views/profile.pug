@@ -1,0 +1,19 @@
+extends layout
+block content
+    div(class="row")
+        div(class="col-md-8 col-md-offset-2")
+        h1 User Profile
+        hr
+        h2=test
+        h2 My Orders
+        each order in orders
+            div(class="panel panel-default")
+                div(class="panel-body")
+                    ul(class="list-group")
+                        each gerecht in order.cart.items
+                            li(class="list-group-item")
+                                span(class="badge") #{gerecht.item.prijs} #{gerecht.item.name} | #{gerecht.qty} Units
+                               
+     
+                div(class="panel-footer")
+                    strong Total Price: #{order.totalPrice}

@@ -1,0 +1,23 @@
+extends layout
+block content
+    
+    remove(name="FormsAuthentication")
+    add(name="FormsAuthentication" type="System.Web.Security.FormsAuthenticationModule")
+    div(class="row")
+        div(class="col-md-4 col-md-offset-4")
+            h2 Sign in
+            //h2=csrfToken
+            if hasErrors
+                div(class="alert alerd-danger")
+                    each message in messages
+                        p #{message}
+            
+            form(action="/catalog/user/signin" method="post")
+                div(class="form-group")
+                    label(for="email") E-mail
+                    input(type="text" id="email" name="email" class="form-control")
+                div(class="form-group")
+                    label(for="password") Password
+                    input(type="password" id="password" name="password" class="form-control")
+                input(type="hidden" name="_csrf" value=csrfToken)
+                button(type="submit") Sign in

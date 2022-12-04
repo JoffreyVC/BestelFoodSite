@@ -1,0 +1,205 @@
+.thumbnail img {
+    max-height: 150px;
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+
+.Container { 
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  background: #5499C7;
+}
+
+.afbeelding { 
+  flex-direction: column;
+  display: flex;
+
+
+}
+.afbeelding img{ 
+  width: 350px;
+  height: 150px;
+  height: 100%;
+  border: 4mm ridge rgba(211, 220, 50, .6);
+
+
+}
+  
+
+
+.categorieDisplay {
+  display: flex;
+  background: #5499C7;  
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  
+}
+
+.categorieDisplay a {
+  display: flex;
+  width: 260px;
+  
+  margin-top: 10px;
+  justify-content: flex-start;
+  background-color: #34495E;
+  padding: 1.5em;
+  color: black;
+  
+  font-size: 1.5em;
+  text-align: center;
+  border-radius:1em;
+  height: 100%;
+
+}
+
+.categorieDisplay a:hover {
+  background: #45B39D;
+}
+
+
+.gerechten{
+  flex-direction: column;
+  display: flex;
+  background: #5499C7;  
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+
+ 
+}
+
+.gerechten a{
+  display: flex;
+  width: 350px;
+  height: 75px;
+  margin-top: 2px;
+  justify-content: flex-start;
+  background-color: #34495E;
+  padding: 1em;
+  color: black;
+  
+  font-size: 1.25em;
+  text-align: center;
+  border-radius:1em;
+	
+}
+
+.gerechten a:hover {
+  background: #45B39D;
+}
+
+.wrapper {
+}
+
+.testPicture {
+
+  flex-direction: column;
+  display: flex;
+  
+}
+
+.testPicture img {
+  width: 260px;
+  height: 100%;
+  
+}
+
+
+
+
+
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  
+  list-style: none;
+  margin: 0; 
+  background: deepskyblue;
+}
+
+.push {
+  margin-left: auto;
+  gap: 10px;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: #1565C0;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+  .gerechtContainer li:last-of-type a {
+    border-bottom: none;
+  }
+}
